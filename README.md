@@ -1,4 +1,21 @@
-# MiningTagTest
+# Dashboard de Indicadores
+
+El propósito de este desarrollo consiste en desplegar un dashboard que contenga los indicadores financieros desde [MiIndicador](https://mindicador.cl/).
+
+Los indicadores desplegados en esta aplicación son los siguientes: 
+* UF
+* IVP
+* Dólar
+* Dólar Observado
+* Euro
+* IPC
+* UTM
+* IMACEC
+* TPM
+* Libra
+* Tasa de desempleo
+* Bitcoin
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
 
