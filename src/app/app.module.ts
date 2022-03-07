@@ -11,12 +11,15 @@ import { ModalModule } from 'ngx-bootstrap/modal';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ToastrModule } from 'ngx-toastr';
+import { IndicatorChartComponent } from './components/indicator-chart/indicator-chart.component';
+import { ChartModule } from 'angular-highcharts';
 
 @NgModule({
   declarations: [
     AppComponent,
     DailyIndicatorComponent,
-    IndicatorHistoryComponent
+    IndicatorHistoryComponent,
+    IndicatorChartComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +32,8 @@ import { ToastrModule } from 'ngx-toastr';
       timeOut: 3000,
       easeTime: 1000,
     }),
-    FontAwesomeModule
+    FontAwesomeModule,
+    ChartModule
   ],
   providers: [],
   bootstrap: [AppComponent]

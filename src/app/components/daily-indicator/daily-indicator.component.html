@@ -14,7 +14,7 @@
             <span style="font-style: italic;">
                 <small> en {{ indicator?.unidad_medida }} al {{ indicator?.fecha | date:'shortDate' }} </small>
             </span>
-            <h3 class="card-title pt-3">
+            <h3 class="card-title pt-3 pb-5">
                 <b>
                     <span
                         *ngIf="getMeasurementUnitText(indicator?.unidad_medida ?? '') == '$' || getMeasurementUnitText(indicator?.unidad_medida ?? '') == 'USD'">
@@ -23,6 +23,7 @@
                         percent }}</span>
                 </b>
             </h3>
+            <app-indicator-chart *ngIf="!isLoading" [indicator]="indicatorHistory"></app-indicator-chart>
         </div>
     </div>
 </div>
