@@ -1,3 +1,4 @@
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { IndicatorHistoryComponent } from './indicator-history.component';
@@ -8,7 +9,8 @@ describe('IndicatorHistoryComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ IndicatorHistoryComponent ]
+      declarations: [ IndicatorHistoryComponent ],
+      imports: [HttpClientTestingModule]
     })
     .compileComponents();
   });
