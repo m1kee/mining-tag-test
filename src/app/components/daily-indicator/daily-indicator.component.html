@@ -1,0 +1,28 @@
+<div class="card shadow-sm">
+    <div class="card-body">
+        <div class="text-center" *ngIf="isLoading">
+            <div class="spinner-border" role="status">
+                <span class="visually-hidden">Cargando...</span>
+            </div>
+        </div>
+        <div *ngIf="!isLoading">
+            <fa-icon [icon]="faHistory" (click)="showLastMonth()" class="clickable float-end"
+                tooltip="Mostrar historial"> </fa-icon>
+            <p class="card-text m-0" style="font-weight: bold;">
+                <small>{{ indicator?.nombre }}</small>
+            </p>
+            <span style="font-style: italic;">
+                <small> en {{ indicator?.unidad_medida }} al {{ indicator?.fecha | date:'shortDate' }} </small>
+            </span>
+            <h3 class="card-title pt-3">
+                <b>
+                    <span
+                        *ngIf="getMeasurementUnitText(indicator?.unidad_medida ?? '') == '$' || getMeasurementUnitText(indicator?.unidad_medida ?? '') == 'USD'">
+                        {{ indicator?.valor | currency }}</span>
+                    <span *ngIf="getMeasurementUnitText(indicator?.unidad_medida ?? '') == '%'"> {{ indicator?.valor |
+                        percent }}</span>
+                </b>
+            </h3>
+        </div>
+    </div>
+</div>
